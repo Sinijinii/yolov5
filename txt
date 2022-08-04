@@ -1,3 +1,14 @@
+환경세팅
+1. yolov5깃
+git clone https://github.com/ultralytics/yolov5
+cd yolov5
+pip install -qr requirements.txt
+
+2. pytorch 깔기
+python
+
+3. 데이터 폴더 만들기 > yaml파일 만들기 > model의 yaml변경(nc의 값만)
+
 학습
 python train.py --img 640 --batch 32 --epochs 200 --data 'data/dataset.yaml' --cfg 'models/yolov5m.yaml' --weights yolov5s.pt --name test
 
@@ -6,3 +17,8 @@ python val.py --data "data/dataset.yaml" --img 1280 --weights "runs/train/test4/
 
 테스트(새로운 이미지로)
 python detect.py --img 1280 --weights "runs/train/test4/weights/best.pt" --source "이미지 주소"
+
+
+
+
+성능 높이기

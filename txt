@@ -1,0 +1,8 @@
+학습
+python train.py --img 640 --batch 32 --epochs 200 --data 'data/dataset.yaml' --cfg 'models/yolov5m.yaml' --weights yolov5s.pt --name test
+
+검증
+python val.py --data "data/dataset.yaml" --img 1280 --weights "runs/train/test4/weights/best.pt"
+
+테스트(새로운 이미지로)
+python detect.py --img 1280 --weights "runs/train/test4/weights/best.pt" --source "이미지 주소"
